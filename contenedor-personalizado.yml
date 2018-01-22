@@ -6,4 +6,4 @@
    roles:
     - lxc
     - configurar-contenedor
-    #- "{{rol}}"
+    - "{{rol}}"
