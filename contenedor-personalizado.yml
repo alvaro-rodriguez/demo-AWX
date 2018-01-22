@@ -3,14 +3,6 @@
    become: yes
    become_user: root
    
-   tasks:
-
-    - name: Creación del contenedor "{{ name_lxc }}" 
-      lxc_container:
-        name: "{{ name_lxc }}"
-        container_log: true
-        template: debian
-        state: started
-        template_options: --release jessie
-    roles:
-     - "{{rol}}"
+   roles:
+    - lxc
+    - "{{rol}}"

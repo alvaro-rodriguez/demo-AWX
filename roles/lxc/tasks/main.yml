@@ -1,0 +1,8 @@
+---
+- name: Creación del contenedor "{{lxc_name}}" 
+  lxc_container:
+    name: "{{lxc_name}}"
+    container_log: true
+    template: debian
+    state: started
+    template_options: --release jessie
