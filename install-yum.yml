@@ -1,0 +1,11 @@
+--- 
+ - hosts: local
+   become: yes
+   become_user: root
+   
+   tasks:
+
+    - name:Instalar yum
+      apt:
+        name: yum
+        state: present
