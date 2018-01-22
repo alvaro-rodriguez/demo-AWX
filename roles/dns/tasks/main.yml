@@ -35,7 +35,7 @@
        
  - name: Reinicio del DNS
    lxc_container: 
-     name:"{{lxc_name}}"
+     name: "{{lxc_name}}"
      container_command: rndc restart
        
        
