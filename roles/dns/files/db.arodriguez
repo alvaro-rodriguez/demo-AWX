@@ -1,0 +1,19 @@
+$TTL    86400
+@       IN      SOA     barney.arodriguez.gonzalonazareno.org. doommaster.arodriguez.gonzalonazareno.org. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                          86400 )       ; Negative Cache TTL
+
+      IN      NS      barney.arodriguez.gonzalonazareno.org.
+
+
+
+barney.arodriguez.gonzalonazareno.org.        IN      A        10.0.4.185 
+homer.arodriguez.gonzalonazareno.org.         IN      A        10.0.4.55
+lisa.arodriguez.gonzalonazareno.org.          IN      A        10.0.4.163
+
+
+www                    IN      CNAME   lisa
+

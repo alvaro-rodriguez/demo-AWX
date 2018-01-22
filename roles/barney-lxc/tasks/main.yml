@@ -1,0 +1,8 @@
+---
+- name: Creación del contenedor barney 
+  lxc_container:
+    name: barney 
+    container_log: true
+    template: debian
+    state: started
+    template_options: --release jessie

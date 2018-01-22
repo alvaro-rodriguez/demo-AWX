@@ -1,0 +1,14 @@
+---
+ - name: instalacin de python-mysqlb
+   apt: name=python-mysqldb state=present
+ - name: instalacin de MySQL server
+   apt: name=mysql-server state=present
+ - name: creacin de usuario remoto
+   mysql_user: user="usuario" host="%" password=usuario priv=*.*:ALL,GRANT 
+ - name: Copiar la configuracion
+   copy: src=my.cnf dest=/etc/mysql/my.cnf
+
+ - name: reinicio de mysql
+   service:
+     name: mysql 
+     state: restarted

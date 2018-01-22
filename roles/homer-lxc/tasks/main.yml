@@ -1,0 +1,8 @@
+--- 
+ - name: Creación del contenedor Homer 
+   lxc_container:
+     name: homer
+     container_log: true
+     template: ubuntu
+     state: started
+     template_options: --release trusty

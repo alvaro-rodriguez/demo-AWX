@@ -1,0 +1,11 @@
+zone "arodriguez.gonzalonazareno.org"{
+ type master;
+ file "db.arodriguez";
+# allow-query {10.0.4.0/24;};
+};
+
+zone "4.0.10.in-addr.arpa" {
+ type master;
+ file "db.10.0.4";
+# allow-query {10.0.4.0/24;};
+};

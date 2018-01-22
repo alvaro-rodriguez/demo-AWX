@@ -1,0 +1,11 @@
+$TTL    86400
+@       IN      SOA     {{ ansible_hostname }}.arodriguez.gonzalonazareno.org. doommaster.arodriguez.gonzalonazareno.org. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                          86400 )       ; Negative Cache TTL
+
+arodriguez.gonzalonazareno.org.      IN      NS      {{ ansible_hostname }}.arodriguez.gonzalonazareno.org.
+$ORIGIN 3.0.10.in-addr.arpa.
+{{barney}}       IN      PTR     {{ ansible_hostname }}.arodriguez.gonzalonazareno.org.

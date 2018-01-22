@@ -1,0 +1,7 @@
+--- 
+ - name: Creación del contenedor Lisa
+   lxc_container:
+     name: lisa
+     container_log: true
+     template: centos
+     state: started
