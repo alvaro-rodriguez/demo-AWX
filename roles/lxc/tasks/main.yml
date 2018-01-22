@@ -20,7 +20,7 @@
 - name: Levantando "{{ lxc_name }}" 1/2
   lxc_container:
     name: "{{ lxc_name }}"
-    state: stoped
+    state: stopped
 - name: Levantando "{{ lxc_name }}" 2/2
   lxc_container:
     name: "{{ lxc_name }}"
