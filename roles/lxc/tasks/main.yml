@@ -7,7 +7,7 @@
     state: stopped
     template_options: --release jessie
 
- - name: configurando red de "{{ lxc_name }}"
+ - name: configurando red del contenedor
    template: 
      src: roles/lxc/files/config
      dest: /var/lib/lxc/"{{lxc_name}}"/config
