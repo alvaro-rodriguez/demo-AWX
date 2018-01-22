@@ -16,7 +16,12 @@
     group: root
     mode: 0644
 
-#- name: Levantando "{{ lxc_name }}"
-#  lxc_container:
-#    name: "{{ lxc_name }}"
-#    state: started
+    
+- name: Levantando "{{ lxc_name }}" 1/2
+  lxc_container:
+    name: "{{ lxc_name }}"
+    state: stoped
+- name: Levantando "{{ lxc_name }}" 2/2
+  lxc_container:
+    name: "{{ lxc_name }}"
+    state: started
