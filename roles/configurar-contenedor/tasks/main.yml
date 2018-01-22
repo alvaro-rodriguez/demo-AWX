@@ -3,7 +3,7 @@
    lxc_container:
      name: "{{lxc_name}}"
      container_command:  |
-       apt update && apt install sshpass  python-minimal -y
+       apt update | apt install sshpass  python-minimal -y
 
  - name: instalación sudo "{{lxc_name}}"
    lxc_container:
