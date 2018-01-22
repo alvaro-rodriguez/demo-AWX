@@ -10,7 +10,7 @@
 - name: configurando red del contenedor
   template: 
     src: roles/lxc/files/config
-    dest: /var/lib/lxc/"{{lxc_name}}"/config
+    dest: /var/lib/lxc/{{lxc_name}}/config
     owner: root
     group: root
     mode: 0644
