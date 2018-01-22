@@ -1,12 +1,11 @@
 ---
     
- - name: instalación sshpass y python-minimal barney
-     lxc_container:
-       name: barney
-       container_command: apt update && apt install bind9 -y
+ - name: instalación de bind9 (DNS) 
+     lxc_container: 
+       name:"{{lxc_name}}"
+       container_command:apt update && apt install bind9 -y
 
 
-/var/lib/lxc/"{{lxc_name}}"/rootfs/
 
  - name: configurando zona directa
    template: 
@@ -35,9 +34,9 @@
 
        
  - name: instalación sshpass y python-minimal barney
-     lxc_container:
-       name: barney
-       container_command: systemctl restart bind9
+   lxc_container: 
+   name:"{{lxc_name}}"
+   container_command:systemctl restart bind9
        
        
        
