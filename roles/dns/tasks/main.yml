@@ -33,10 +33,10 @@
      mode: 0644       
 
        
- - name: instalación sshpass y python-minimal barney
+ - name: Reinicio del DNS
    lxc_container: 
-   name:"{{lxc_name}}"
-   container_command:systemctl restart bind9
+     name:"{{lxc_name}}"
+     container_command:systemctl restart bind9
        
        
        
