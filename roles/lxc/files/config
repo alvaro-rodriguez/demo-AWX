@@ -1,0 +1,20 @@
+## Network
+lxc.utsname = "{{ lxc_name }}"
+lxc.network.type = veth
+lxc.network.flags = up
+
+# that's the interface defined above in host's interfaces file
+lxc.network.link = br0
+
+# name of network device inside the container,
+# defaults to eth0, you could choose a name freely
+# lxc.network.name = lxcnet0 
+
+lxc.network.hwaddr = 00:FF:AA:00:00:01
+
+# the ip may be set to 0.0.0.0/24 or skip this line
+# if you like to use a dhcp client inside the container
+lxc.network.ipv4 = 10.118.85.13/24
+
+# define a gateway to have access to the internet
+lxc.network.ipv4.gateway = 10.118.85.1
