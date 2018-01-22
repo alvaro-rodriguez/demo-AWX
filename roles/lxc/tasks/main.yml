@@ -1,7 +1,7 @@
 ---
 - name: Creación del contenedor "{{lxc_name}}" 
   lxc_container:
-    name: "{{lxc_name}}"
+    name: "{{ lxc_name }}"
     container_log: true
     template: debian
     state: stopped
@@ -16,6 +16,6 @@
      mode: 0644
 
  - name: Levantando "{{ lxc_name }}"
-  lxc_container:
-    name: "{{ lxc_name }}"
-    state: started
+   lxc_container:
+     name: "{{ lxc_name }}"
+     state: started
