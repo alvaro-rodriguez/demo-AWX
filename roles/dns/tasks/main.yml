@@ -1,11 +1,17 @@
 ---
- - name: instalación de dns
-   apt: name=bind9 state=present
- 
+    
+ - name: instalación sshpass y python-minimal barney
+     lxc_container:
+       name: barney
+       container_command: apt update && apt install bind9 -y
+
+
+/var/lib/lxc/"{{lxc_name}}"/rootfs/
+
  - name: configurando zona directa
    template: 
      src: roles/dns/files/db.arodriguez
-     dest: /var/cache/bind/db.arodriguez
+     dest: /var/lib/lxc/"{{lxc_name}}"/rootfs/var/cache/bind/db.arodriguez
      owner: root
      group: root
      mode: 0644
@@ -13,7 +19,7 @@
  - name: configurando conf.local
    template:
      src: roles/dns/files/db.named.conf.local
-     dest: /etc/bind/named.conf.local
+     dest: /var/lib/lxc/"{{lxc_name}}"/rootfs/etc/bind/named.conf.local
      owner: root
      group: root
      mode: 0644
@@ -22,12 +28,16 @@
  - name: configurando zona inversa
    template:
      src: roles/dns/files/db.10.0.4
-     dest: /var/cache/bind/db.10.0.4
+     dest: /var/lib/lxc/"{{lxc_name}}"/rootfs/var/cache/bind/db.10.0.4
      owner: root
      group: root
-     mode: 0644
+     mode: 0644       
 
- - name: reinicio de bind
-   service:
-     name: bind9
-     state: restarted
+       
+ - name: instalación sshpass y python-minimal barney
+     lxc_container:
+       name: barney
+       container_command: systemctl restart bind9
+       
+       
+       
