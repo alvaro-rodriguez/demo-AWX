@@ -4,7 +4,7 @@
    become_user: root
    
    tasks:
-  - name: eliminar contenedor
-    lxc_container:
-      name: '{{ lxc_name }}'
-      state: absent
+    - name: eliminar contenedor
+      lxc_container:
+        name: '{{ lxc_name }}'
+        state: absent
