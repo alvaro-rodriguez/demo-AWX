@@ -14,8 +14,8 @@
  - name: creación de usuario
    lxc_container:
      name: "{{lxc_name}}"
-     container_command:  
-     | useradd usuario -s /bin/bash -m 
+     container_command: |
+       useradd usuario -s /bin/bash -m 
 
  - name: configuración del usuario
    lxc_container:
