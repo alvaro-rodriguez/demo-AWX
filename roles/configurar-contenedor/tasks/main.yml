@@ -2,7 +2,8 @@
  - name: instalación sshpass y python-minimal "{{lxc_name}}"
    lxc_container:
      name: "{{lxc_name}}"
-     container_command: apt update && apt install sshpass  python-minimal -y
+     container_command:  |
+       apt update && apt install sshpass  python-minimal -y
 
  - name: instalación sudo "{{lxc_name}}"
    lxc_container:
@@ -13,7 +14,8 @@
  - name: creación de usuario
    lxc_container:
      name: "{{lxc_name}}"
-     container_command: useradd usuario -s /bin/bash -m 
+     container_command:  
+     | useradd usuario -s /bin/bash -m 
 
  - name: configuración del usuario
    lxc_container:

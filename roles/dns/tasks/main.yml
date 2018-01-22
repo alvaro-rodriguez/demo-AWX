@@ -3,7 +3,8 @@
  - name: instalación de bind9 (DNS) 
    lxc_container: 
      name: "{{lxc_name}}"
-     container_command: apt install bind9 -y
+     container_command:  |
+       apt install bind9 -y
 
 
 
@@ -36,7 +37,8 @@
  - name: Reinicio del DNS
    lxc_container: 
      name: "{{lxc_name}}"
-     container_command: rndc restart
+     container_command:  |
+       rndc restart
        
        
        
