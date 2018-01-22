@@ -7,15 +7,15 @@
     state: stopped
     template_options: --release jessie
 
- - name: configurando red del contenedor
-   template: 
-     src: roles/lxc/files/config
-     dest: /var/lib/lxc/"{{lxc_name}}"/config
-     owner: root
-     group: root
-     mode: 0644
+- name: configurando red del contenedor
+  template: 
+    src: roles/lxc/files/config
+    dest: /var/lib/lxc/"{{lxc_name}}"/config
+    owner: root
+    group: root
+    mode: 0644
 
- - name: Levantando "{{ lxc_name }}"
-   lxc_container:
-     name: "{{ lxc_name }}"
-     state: started
+- name: Levantando "{{ lxc_name }}"
+  lxc_container:
+    name: "{{ lxc_name }}"
+    state: started
