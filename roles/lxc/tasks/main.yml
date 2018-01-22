@@ -7,9 +7,9 @@
     state: started
     template_options: --release jessie
     container_config:
-      - lxc.network.type: veth
-      - lxc.network.name: eth0
-      - lxc.network.link: lxcbr0
-      - lxc.network.ipv4: "{{ ip }}"
-      - lxc.network.ipv4.gateway: "{{ puerta_enlace }}"
-      - lxc.network.flags: up
+      - "lxc.network.type: veth"
+      - "lxc.network.name: eth0"
+      - "lxc.network.link: lxcbr0"
+      - "lxc.network.ipv4: '{{ ip }}'"
+      - "lxc.network.ipv4.gateway: '{{ puerta_enlace }}'"
+      - "lxc.network.flags: up"
