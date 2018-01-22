@@ -5,9 +5,9 @@
    
    tasks:
 
-    - name: Creación del contenedor {{ name_lxc }} 
+    - name: Creación del contenedor "{{ name_lxc }}" 
       lxc_container:
-        name: {{ name_lxc }} 
+        name: "{{ name_lxc }}"
         container_log: true
         template: debian
         state: started
