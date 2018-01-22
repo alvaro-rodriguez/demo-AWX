@@ -16,9 +16,9 @@
      container_command: useradd usuario -s /bin/bash -m 
 
  - name: configuración del usuario
-     lxc_container:
-       name: "{{lxc_name}}"
-       container_command: |
+   lxc_container:
+     name: "{{lxc_name}}"
+     container_command: |
         echo -e "usuario\nusuario" | passwd usuario
 
  - name: configuración de sudo
