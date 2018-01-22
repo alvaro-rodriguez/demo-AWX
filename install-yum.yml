@@ -5,6 +5,4 @@
    
    tasks:
     - name:Instalar yum
-      apt:
-        name: yum
-        state: present
+      apt: name=yum state=present
