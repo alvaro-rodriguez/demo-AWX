@@ -1,13 +1,13 @@
 ---
  - name: instalación de httpd (apache)
-   yum: name=httpd state=present
+   apt: name=apache2 state=present
  - name: instalación de php
-   yum: name=php state=present
+   apt: name=php state=present
 
  - name: Copiar la página de presentación
    copy: src=index.html dest=/var/www/html/index.html 
 
  - name: reinicio de http
    service:
-     name: httpd
+     name: apache2
      state: restarted
