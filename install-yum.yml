@@ -4,5 +4,7 @@
    become_user: root
    
    tasks:
-    - name:Instalar yum
-      apt: name=yum state=present
+    - name: Update repositories cache and install "foo" package
+      apt:
+        name: foo
+        update_cache: yes
