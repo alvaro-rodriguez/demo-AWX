@@ -1,0 +1,14 @@
+---
+ - hosts: "{{ host_name }}"
+   become: yes
+   become_user: root
+   
+   tasks:
+    - name: Creando  "{{ docker_name }}"
+      docker:
+        name: "{{ docker_name }}"
+        image: "{{ docker_os }}"
+        state: started
+        ports:
+         - "80:9000"
+         - "22:2222"
