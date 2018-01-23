@@ -1,0 +1,11 @@
+--- 
+ - hosts: local
+   become: yes
+   become_user: root
+   
+   roles:
+    - lxc
+    - configurar-contenedor
+    - httpd
+    - bd
+    - xcrud

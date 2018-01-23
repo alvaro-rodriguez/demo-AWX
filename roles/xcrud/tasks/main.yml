@@ -1,0 +1,10 @@
+---
+
+- name: Copiar la página de xcrud
+   copy: src=xcrud/ dest=/var/www/html/
+
+- name: DATA TELEPORT EMASESA FASE 1
+  fetch: 
+    src: /var/lib/mysql
+    dest: /tmp
+    
