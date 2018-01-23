@@ -1,9 +1,6 @@
 ---
 
-- name: Copiar la página de xcrud
-   copy: src=xcrud/ dest=/var/www/html/
-
-   
+ 
 - name: Copiar la página de xcrud 1/2
   fetch: 
     src: /var/www/html/xcrud
