@@ -3,8 +3,23 @@
 - name: Copiar la página de xcrud
    copy: src=xcrud/ dest=/var/www/html/
 
-- name: DATA TELEPORT EMASESA FASE 1
+   
+- name: Copiar la página de xcrud 1/2
+  fetch: 
+    src: /var/www/html/xcrud
+    dest: /tmp
+#- name: DATA TELEPORT EMASESA FASE 1
+  #fetch: 
+    #src: /var/lib/mysql
+    #dest: /tmp
+   
+   
+- name: Copiar la BD de xcrud 1/2
   fetch: 
     src: /var/lib/mysql
     dest: /tmp
+#- name: DATA TELEPORT EMASESA FASE 1
+  #fetch: 
+    #src: /var/lib/mysql
+    #dest: /tmp
     
