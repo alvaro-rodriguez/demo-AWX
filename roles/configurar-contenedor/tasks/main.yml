@@ -15,17 +15,17 @@
    lxc_container:
      name: "{{lxc_name}}"
      container_command: |
-       useradd user -s /bin/bash -m 
+       useradd usuario -s /bin/bash -m 
 
  - name: configuración del usuario
    lxc_container:
      name: "{{lxc_name}}"
      container_command: |
-        echo -e "usuario\nusuario" | passwd user
+        echo -e "usuario\nusuario" | passwd ususuario
 
  - name: configuración de sudo
    lxc_container:
      name: "{{lxc_name}}"
      container_command: |
-        echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+        echo "usuario ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
        
