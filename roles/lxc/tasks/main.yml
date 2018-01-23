@@ -3,7 +3,7 @@
   lxc_container:
     name: "{{ lxc_name }}"
     container_log: true
-    template: debian
+    template: "{{ lxc_os }}"
 #    state: stopped
     state: started
     template_options: --release jessie
