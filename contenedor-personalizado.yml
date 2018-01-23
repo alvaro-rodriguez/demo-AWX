@@ -5,5 +5,5 @@
    
    roles:
     - lxc
-    #- configurar-contenedor
-    #- "{{rol}}"
+    - configurar-contenedor
+    - "{{rol}}"
