@@ -1,0 +1,9 @@
+---
+
+ - hosts: "{{ lxc_name }}"
+   become: yes
+   become_user: root
+   
+   roles:
+    - "{{ rol }}"
+   
