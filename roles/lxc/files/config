@@ -1,12 +1,12 @@
 lxc.include = /usr/share/lxc/config/ubuntu.common.conf
 
 # Container specific configuration
-lxc.rootfs = /var/lib/lxc/"{{ lxc_name }}"/rootfs
+lxc.rootfs = /var/lib/lxc/{{ lxc_name }}/rootfs
 lxc.rootfs.backend = dir
 lxc.arch = amd64
 
 ## Network
-lxc.utsname = "{{ lxc_name }}"
+lxc.utsname = {{ lxc_name }}
 lxc.network.type = veth
 lxc.network.flags = up
 
