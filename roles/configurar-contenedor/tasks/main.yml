@@ -21,7 +21,7 @@
    lxc_container:
      name: "{{lxc_name}}"
      container_command: |
-        echo -e "usuario\nusuario" | passwd ususuario
+        echo -e "usuario\nusuario" | passwd usuario
 
  - name: configuración de sudo
    lxc_container:

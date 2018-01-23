@@ -6,7 +6,7 @@
      container_command:  |
        apt install python-mysqldb -y
 
- - name: instalacin de python-mysqlb 
+ - name: instalacin de mysql-server 
    lxc_container: 
      name: "{{lxc_name}}"
      container_command:  |
@@ -16,7 +16,7 @@
    copy: src=my.cnf dest=/var/lib/lxc/{{lxc_name}}/rootfs/etc/mysql/my.cnf
 
    
- - name: instalacin de python-mysqlb 
+ - name: Reiniciando MySQL 
    lxc_container: 
      name: "{{lxc_name}}"
      container_command:  |
