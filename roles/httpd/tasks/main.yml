@@ -1,6 +1,6 @@
 ---
  - name: instalación de httpd (apache)
-   apt: name=apache2 state=present
+   apt: name=apache2 state=latest
 
  - name: instalación de php
    apt: name=php state=present
