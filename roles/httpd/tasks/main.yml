@@ -1,14 +1,20 @@
 ---
- - name: instalación de httpd (apache)
-   apt: name=apache2 state=latest
 
- - name: instalación de php
-   apt: name=php state=present
+ - name: instalación de apache2 
+   lxc_container: 
+     name: "{{lxc_name}}"
+     container_command:  |
+       apt install apache2 -y
+       
+ - name: instalación de php 
+   lxc_container: 
+     name: "{{lxc_name}}"
+     container_command:  |
+        apt install php -y
 
- - name: Copiar la página de presentación
-   copy: src=index.html dest=/var/www/html/index.html 
-
- - name: reinicio de http
-   service:
-     name: apache2
-     state: restarted
+ - name: Reiniciando apache 
+   lxc_container: 
+     name: "{{lxc_name}}"
+     container_command:  |
+       apachectl restart
+       
