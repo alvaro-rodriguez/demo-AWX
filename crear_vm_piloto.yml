@@ -30,20 +30,20 @@
          num_cpus: "{{ vm_cpu }}"
        state: restarted 
 
-   - name: Reinicio del guest
-     vmware_guest:
-       validate_certs: False
-       hostname: "{{ host_name }}"
-       username: "{{ username }}"
-       password: "{{ password }}"
-       esxi_hostname: "{{ esxhost }}"
-       datacenter: "{{ datacenter }}"
-       name: "{{ vm_name }}"
-       disk:
-        - size_gb: "{{ vm_disk }}"
-          type: thin
-          datastore: "{{ datastore }}"       
-       state: restarted
+#   - name: Reinicio del guest
+#     vmware_guest:
+#       validate_certs: False
+#       hostname: "{{ host_name }}"
+#       username: "{{ username }}"
+#       password: "{{ password }}"
+#       esxi_hostname: "{{ esxhost }}"
+#       datacenter: "{{ datacenter }}"
+#       name: "{{ vm_name }}"
+#       disk:
+#        - size_gb: "{{ vm_disk }}"
+#          type: thin
+#          datastore: "{{ datastore }}"       
+#       state: restarted
        
    - name: power on vm
      vsphere_guest: 
