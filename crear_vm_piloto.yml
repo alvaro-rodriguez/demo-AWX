@@ -10,7 +10,7 @@
        username: "{{ username }}"
        password: "{{ password }}"
        esxi_hostname: "{{ esxhost }}"
-       datacenter: {{ datacenter }}"
+       datacenter: "{{ datacenter }}"
        name: "{{ vm_name }}"
        template: "{{ vmtemplate }}"
        disk:
