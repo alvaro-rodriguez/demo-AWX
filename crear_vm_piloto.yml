@@ -3,7 +3,7 @@
   hosts: local
     
   tasks:
-   - name: Create VM from template
+   - name: Creacién del guest
      vmware_guest:
        validate_certs: False
        hostname: "{{ host_name }}"
@@ -29,3 +29,13 @@
          memory_mb: "{{ vm_mem }}"
          num_cpus: "{{ vm_cpu }}"
        state: restarted 
+
+   - name: Reinicio del guest
+     vmware_guest:
+       hostname: "{{ host_name }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       esxi_hostname: "{{ esxhost }}"
+       datacenter: "{{ datacenter }}"
+       name: "{{ vm_name }}"
+       state: restarted
