@@ -39,4 +39,8 @@
        esxi_hostname: "{{ esxhost }}"
        datacenter: "{{ datacenter }}"
        name: "{{ vm_name }}"
+       disk:
+        - size_gb: "{{ vm_disk }}"
+          type: thin
+          datastore: "{{ datastore }}"       
        state: restarted
