@@ -45,11 +45,11 @@
 #          datastore: "{{ datastore }}"       
 #       state: restarted
        
-   - name: power on vm
-     vsphere_guest: 
-       vcenter_hostname: "{{ host_name }}"
-       username: "{{ username }}"
-       password: "{{ password }}"
-       guest: "{{ vm_name }}"
-       state: restarted
-       force: yes    
+#   - name: power on vm
+#     vsphere_guest: 
+#       vcenter_hostname: "{{ host_name }}"
+#       username: "{{ username }}"
+#       password: "{{ password }}"
+#       guest: "{{ vm_name }}"
+#       state: restarted
+#       force: yes    
