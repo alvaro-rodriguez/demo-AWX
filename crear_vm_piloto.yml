@@ -1,0 +1,31 @@
+---
+- name: VM from template
+  hosts: local
+    
+  tasks:
+   - name: Create VM from template
+     vmware_guest:
+       validate_certs: False
+       hostname: "{{ host_name }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       esxi_hostname: "{{ esxhost }}"
+       datacenter: {{ datacenter }}"
+       name: "{{ vm_name }}"
+       template: "{{ vmtemplate }}"
+       disk:
+        - size_gb: "{{ vm_disk }}"
+          type: thin
+          datastore: "{{ datastore }}"
+       networks:
+        - name: "{{ vm_network }}"
+          ip: "{{ vm_ip }}"
+          netmask: "{{ netmask }}"
+          network: dvSwitch Network
+          #type: vmxnet3
+          network_type: standard
+          state: present
+       hardware:
+         memory_mb: "{{ vm_mem }}"
+         num_cpus: "{{ vm_cpu }}"
+       state: restarted 
